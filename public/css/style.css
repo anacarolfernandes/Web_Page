@@ -1,25 +1,25 @@
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Base */
+  /* BASE */
   body {
     font-family: 'Inter', sans-serif;
     background-color: #f9f9fb;
     color: #333;
   }
   
-  /* Container Utility */
+  /* UTILITIES */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
   }
   
-  /* Header base */
+  /* HEADER */
   .main-header {
     background-color: white;
     padding: 1.5rem 2rem;
@@ -31,14 +31,12 @@
     z-index: 100;
   }
   
-  /* Layout */
   .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  /* Logo */
   .logo {
     font-size: 2.4rem;
     font-weight: bold;
@@ -48,11 +46,10 @@
   }
   
   .logo-icon {
-    font-size: 1.2rem;
-    color: #7f4ef3;
+    height: 2rem; 
+    width: auto;
   }
   
-  /* Nav */
   .nav-links {
     display: flex;
     gap: 2rem;
@@ -86,7 +83,6 @@
     font-weight: 700;
   }
   
-  /* Sign In Button */
   .sign-in {
     background-color: #7f4ef3;
     color: white;
@@ -101,4 +97,119 @@
   
   .sign-in:hover {
     background-color: #6d3fe1;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    padding: 4rem 1rem;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  .hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "text-left     image2       text-right"
+      "image1        image1       image1"
+      "image5        image6       image4"
+      "image7        image3       image3"
+      ".             button       .";
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  /* GRID AREAS */
+  .text.left    { grid-area: text-left; }
+  .text.right   { grid-area: text-right; }
+  .image1       { grid-area: image1; }
+  .image2       { grid-area: image2; }
+  .image3       { grid-area: image3; }
+  .image4       { grid-area: image4; }
+  .image5       { grid-area: image5; }
+  .image6       { grid-area: image6; }
+  .image7       { grid-area: image7; }
+  .cta-button   { grid-area: button; }
+  
+  /* TILE STYLING */
+  .tile {
+    position: relative;
+  }
+  
+  .hero-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  .hero-grid .overlay p {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* TEXT STYLES */
+  .text {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* CAPTION FIX */
+  .caption-wrapper {
+    padding-top: 0.5rem;
+    text-align: center;
+  }
+  
+  .caption {
+    font-size: 0.9rem;
+    color: #1f2937;
+  }
+  
+  .caption-small {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+  }
+  
+  /* CTA BUTTON */
+  .cta-button {
+    display: inline-block;
+    background-color: #7f4ef3;
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  /* BACKGROUND SHAPES */
+  .bg-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    z-index: 0;
+  }
+  
+  .bg-dots {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 100px;
+    z-index: 1;
   }
