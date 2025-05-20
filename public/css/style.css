@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/* Ensure root elements don’t add spacing */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* BASE */
 body {
   font-family: 'Inter', sans-serif;
@@ -387,10 +393,13 @@ h1 {
   color: white;
 }
 
+/* footer section */
 .footer {
+  width: 100%;
   background-color: #fff;
   padding: 5rem 1rem 0;
   position: relative;
+  overflow: hidden;
 }
 
 .footer-container {
@@ -407,7 +416,7 @@ h1 {
 }
 
 .social-icons a img {
-  height: 24px;
+  height: 40px;
   margin-right: 1.2rem;
   transition: transform 0.3s;
 }
@@ -503,11 +512,16 @@ h1 {
   background-color: #6d3fe1;
 }
 
+.footer-wave-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .footer-wave {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 4rem;
   object-fit: cover;
 }
 
